@@ -1,0 +1,29 @@
+{
+  "name": "ipaddress_tracker",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html",
+    "prettier": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rouanis5/ipaddress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rouanis5/ipaddress/issues"
+  },
+  "homepage": "https://github.com/rouanis5/ipaddress#readme",
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "parcel": "^2.5.0",
+    "prettier": "^2.6.2"
+  }
+}

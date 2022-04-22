@@ -1,0 +1,41 @@
+@use 'sass:math';
+.parent {
+  padding: 68px 0;
+}
+.container {
+  width: 100%;
+  @include mq($sm) {
+    max-width: $container-sm;
+  }
+  @include mq($md) {
+    max-width: $container-md;
+  }
+  @include mq($lg) {
+    max-width: $container-lg;
+  }
+  @include mq($lg) {
+    max-width: $container-lg;
+  }
+  @include mq($xl) {
+    max-width: $container-xl;
+  }
+  @include mq($xxl) {
+    max-width: $container-xxl;
+  }
+  margin-inline: auto;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+  user-select: none;
+  &,
+  &:active {
+    border: none;
+    outline: none;
+  }
+}

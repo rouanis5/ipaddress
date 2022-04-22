@@ -1,0 +1,52 @@
+// $themes: ('light', 'dark');
+$themes: ('light');
+$colors: (
+  #{null}: (
+      bg: (
+        #fcfcfc,
+      ),
+      bg-alt: (
+        #ececec,
+      ),
+      white: (
+        #fff,
+      ),
+    ),
+  f: (
+    black: #4d4d4d,
+    white: (
+      var(--clr--white),
+    ),
+  ),
+  sm: (
+    //social media colors
+    facebook: #3b5998,
+    instagram: #e95950,
+    linkedin: #007bb5,
+    github: (#212121, var(--clr--white))
+  )
+);
+
+//generating css variables
+:root {
+  @each $group, $content in $colors {
+    @each $color, $hex in $content {
+      @if (length($hex) == 1) {
+        --clr-#{$group}-#{"" + $color}: #{$hex};
+      }
+      @if (length($hex) == 2) {
+        --clr-#{$group}-#{"" + $color}: #{nth($hex, 1)};
+      }
+    }
+  }
+}
+// //black theme
+// body.#{nth($themes, 2)} {
+//   @each $group, $content in $colors {
+//     @each $color, $hex in $content {
+//       @if (length($hex) == 2) {
+//         --clr-#{$group}-#{"" + $color}: #{nth($hex, 2)};
+//       }
+//     }
+//   }
+// }

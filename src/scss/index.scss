@@ -1,0 +1,19 @@
+@import 'npm:bootstrap/scss/bootstrap-reboot';
+//init files
+@import './variables/constants';
+@import './helpers/mixins';
+@import './helpers/placeholders';
+@import './helpers/utilities';
+
+//main
+
+@import './base/init';
+@import './variables/colors';
+@import './variables/constants';
+@import './helpers/mixins';
+@import './base/scrollbar';
+@import './base/typography';
+
+@import './helpers/animations';
+@import './helpers/placeholders';
+@import './helpers/utilities';

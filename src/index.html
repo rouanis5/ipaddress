@@ -15,5 +15,37 @@
     <link rel="stylesheet" href="./scss/index.scss" />
     <title>IP Address Tracker</title>
   </head>
-  <body></body>
+  <body>
+    <main class="main">
+      <div class="container">
+        <h1>IP Address Tracker</h1>
+        <label for=""></label>
+        <div class="field">
+          <input type="text" id="ipaddress" />
+          <button type="submit"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div class="card">
+          <ul>
+            <li>
+              <small>ip address</small>
+              <span id="ip">192.168.174.101</span>
+            </li>
+            <li>
+              <small>location</small>
+              <span id="location">brooklyn, ny 10001</span>
+            </li>
+            <li>
+              <small>timezone</small>
+              <span id="timezone">UTC -05:00</span>
+            </li>
+            <li>
+              <small>isp</small>
+              <span id="isp">spaceX starlink</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <section class="map" id="map"></section>
+  </body>
 </html>

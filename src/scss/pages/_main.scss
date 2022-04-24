@@ -1,3 +1,4 @@
+@use '../helpers/animations';
 $radius: 0.5em;
 .main {
   background-color: #5771d8;
@@ -58,10 +59,28 @@ $radius: 0.5em;
   }
 }
 .map {
-  background: #00000050;
+  background: var(--clr--bg-alt);
   min-height: 100vh;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: -1;
+}
+
+.skeleton {
+  animation: skeleton-loading 1s linear alternate infinite;
+  &.skeleton-text {
+    height: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-inline: auto;
+    border-radius: $radius;
+    &:last-child {
+      margin-bottom: 0;
+      width: 80%;
+    }
+  }
+  &.hide {
+    display: none;
+  }
 }

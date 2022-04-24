@@ -1,3 +1,5 @@
+import updateMap from './map';
+
 const btn = document.getElementById('button');
 const input = document.getElementById('ipaddress');
 
@@ -21,5 +23,6 @@ btn.addEventListener('click', async (e) => {
     location.innerHTML = `${info.location.city}, ${info.location.region}, ${info.location.country} `;
     timezone.innerHTML = `UTC ${info.location.timezone}`;
     isp.innerHTML = info.isp;
+    updateMap(info.location.lng, info.location.lat);
   }
 });

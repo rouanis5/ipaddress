@@ -49,6 +49,8 @@ async function fetchData() {
     timezone.innerHTML = timezoneText;
     isp.innerHTML = ispText;
     updateMap(info.location.lng, info.location.lat);
+  } else {
+    input.value = '';
   }
 }
 
@@ -56,3 +58,5 @@ btn.addEventListener('click', (e) => {
   e.preventDefault();
   fetchData();
 });
+
+export default fetchData;

@@ -1,0 +1,67 @@
+$radius: 0.5em;
+.main {
+  background-color: #5771d8;
+  background-image: url('../images/pattern-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 150px;
+  h1 {
+    color: var(--clr-f-white);
+    font-size: 1.75em;
+    margin-bottom: 1em;
+    padding-top: 1em;
+  }
+}
+.field {
+  margin-bottom: 1.5em;
+  border-radius: $radius;
+  overflow: hidden;
+  @include flex(null, stretch);
+  input {
+    width: 100%;
+    padding: 1em;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+  }
+  button {
+    min-width: 3.5em;
+    background-color: #000;
+    i {
+      color: #fff;
+    }
+  }
+}
+.card {
+  z-index: 2;
+  margin-top: -150px;
+  ul {
+    background-color: var(--clr--white);
+    padding: 1.5em;
+    border-radius: $radius;
+  }
+  li:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+  small {
+    display: block;
+    font-weight: $fw-regular;
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+  }
+  span {
+    font-weight: $fw-medium;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+  }
+}
+.map {
+  background: #00000050;
+  min-height: 100vh;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+}

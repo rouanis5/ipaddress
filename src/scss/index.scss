@@ -1,19 +1,15 @@
-@import 'npm:bootstrap/scss/bootstrap-reboot';
+// @import 'npm:bootstrap/scss/bootstrap-reboot';
 @import 'npm:@fortawesome/fontawesome-free/css/all.css';
-//init files
-@import './variables/constants';
-@import './helpers/mixins';
-@import './helpers/placeholders';
-@import './helpers/utilities';
+@import 'npm:mapbox-gl/dist/mapbox-gl.css';
 
-//main
+//init files
 @import './base/init';
 @import './variables/colors';
-@import './variables/constants';
+// @import './variables/constants';
+@import './variables/fonts';
 @import './helpers/mixins';
-@import './base/scrollbar';
-@import './base/typography';
+//main
+@import './pages/main';
 
-@import './helpers/animations';
 @import './helpers/placeholders';
 @import './helpers/utilities';

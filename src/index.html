@@ -21,7 +21,7 @@
         <h1>IP Address Tracker</h1>
         <label for=""></label>
         <form class="field">
-          <input type="text" id="ipaddress" />
+          <input type="text" id="ipaddress" placeholder="Your local IP Adress"/>
           <button type="submit" id="button"><i class="fa-solid fa-chevron-right"></i></button>
         </fo>
       </div>
@@ -31,24 +31,34 @@
         <ul>
           <li>
             <small>ip address</small>
-            <span id="ip">192.168.174.101</span>
+            <span class="data" id="ip"></span>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
           </li>
           <li>
             <small>location</small>
-            <span id="location">brooklyn, ny 10001</span>
+            <span class="data" id="location"></span>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
           </li>
           <li>
             <small>timezone</small>
-            <span id="timezone">UTC -05:00</span>
+            <span class="data" id="timezone"></span>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
           </li>
           <li>
             <small>isp</small>
-            <span id="isp">spaceX starlink</span>
+            <span class="data" id="isp"> </span>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
           </li>
         </ul>
       </div>
     </div>
-    <section class="map" id="map"></section>
+    <section class="map" id="map">
+      <div class="skeleton skeleton-block"></div>
+    </section>
     <script src="./js/index.js" type="module"></script>
   </body>
 </html>

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html",
+    "start": "rm -rf .parcel-cache dist && parcel ./src/index.html",
+    "build": "rm -rf .parcel-cache dist && parcel build ./src/index.html --public-url ./",
     "prettier": "prettier --write ."
   },
   "repository": {
@@ -26,6 +26,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
+    "mapbox-gl": "^2.8.2",
     "parcel": "^2.5.0",
     "prettier": "^2.6.2"
   }

@@ -3,12 +3,21 @@ import updateMap from './map';
 const btn = document.getElementById('button');
 const input = document.getElementById('ipaddress');
 const skeleton = document.querySelectorAll('.skeleton');
+const cache = {};
 
 async function ipify(ipAddress) {
   const ip = ipAddress;
+  // quick return from cache
+  const cacheKey = JSON.stringify({ ip });
+  if (cache[cacheKey]) {
+    return cache[cacheKey];
+  }
+
   const url = `https://geo.ipify.org/api/v2/country,city?apiKey=at_4c3hq1BOKnOI0a6BCm0jaB0YpiNTj&ipAddress=${ip}`;
   const response = await fetch(url);
   const result = await response.json();
+
+  cache[cacheKey] = result; // store the result in cache
   return result;
 }
 

@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "rm -rf .parcel-cache dist && parcel ./src/index.html",
-    "build": "rm -rf .parcel-cache dist && parcel build ./src/index.html --public-url ./",
-    "prettier": "prettier --write .",
-    "publish": "rm -rf .parcel-cache dist && parcel build ./src/index.html --public-url https://rouanis5.github.io/ipaddress/ && gh-pages -d ./dist"
+    "clean": "rm -rf .parcel-cache dist",
+    "start": "npm run clean && parcel ./src/index.html",
+    "build": "npm run clean && parcel build ./src/index.html",
+    "preview": "npm run build -- --public-url ./",
+    "publish": "npm run build -- --public-url https://rouanis5.github.io/ipaddress/ && gh-pages -d ./dist",
+    "prettier": "prettier --write ."
   },
   "repository": {
     "type": "git",

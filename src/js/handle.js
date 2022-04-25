@@ -60,6 +60,7 @@ async function fetchData() {
     updateMap(info.location.lng, info.location.lat);
   } else {
     input.value = '';
+    fetchData();
   }
 }
 

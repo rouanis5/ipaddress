@@ -6,7 +6,7 @@
     "start": "rm -rf .parcel-cache dist && parcel ./src/index.html",
     "build": "rm -rf .parcel-cache dist && parcel build ./src/index.html --public-url ./",
     "prettier": "prettier --write .",
-    "publish": "rm -rf .parcel-cache dist && parcel build ./src/index.html --public-url http://rouanis5.github.io/ipaddress/ && gh-pages -d ./dist"
+    "publish": "rm -rf .parcel-cache dist && parcel build ./src/index.html --public-url https://rouanis5.github.io/ipaddress/ && gh-pages -d ./dist"
   },
   "repository": {
     "type": "git",

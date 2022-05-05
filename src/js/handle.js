@@ -1,4 +1,5 @@
 import updateMap from './map';
+import Env from './.env';
 
 const btn = document.getElementById('button');
 const input = document.getElementById('ipaddress');
@@ -12,8 +13,8 @@ async function ipify(ipAddress) {
   if (cache[cacheKey]) {
     return cache[cacheKey];
   }
-
-  const url = `https://geo.ipify.org/api/v2/country,city?apiKey=at_4c3hq1BOKnOI0a6BCm0jaB0YpiNTj&ipAddress=${ip}`;
+  const apiKey = Env.ipAPI;
+  const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ip}`;
   const response = await fetch(url);
   const result = await response.json();
 
